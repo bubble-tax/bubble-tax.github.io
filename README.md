@@ -40,4 +40,4 @@ Product captures use richer isolated sample data. Transparent outer margins and 
 
 ## Appearance
 
-The page follows the system theme on first visit. Light/Dark switches persist locally. Product images use native light and dark captures; the menu-bar SVG is an illustration with sample quota, using the actual app title format. Every tour screen and enlarged image follows the selected theme.
+The page follows the system theme on first visit. Light/Dark switches persist locally. Product images use native light and dark captures; the hero combines a macOS desktop illustration with the native app capture. Its menu-bar quota uses the actual app title format and opens or closes the captured preview. Every tour screen and enlarged image follows the selected theme.
