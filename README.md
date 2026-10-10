@@ -21,18 +21,22 @@ Paid-plan quotas rotate in the menu bar every eight seconds. Open it to see each
   </tr>
   <tr>
     <td valign="top">
+<a href="assets/overview.png">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/overview-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/overview.png">
   <img src="assets/overview.png" alt="Bubble Tax overview: five AI subscriptions, weekly quota left and a contextual roast" width="380">
 </picture>
+</a>
     </td>
     <td valign="top">
+<a href="assets/savings.png">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/savings-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/savings.png">
   <img src="assets/savings.png" alt="Savings: recorded cancellations and downgrades, with estimated monthly price reductions" width="380">
 </picture>
+</a>
     </td>
   </tr>
 </table>
@@ -44,11 +48,13 @@ Actual macOS captures with illustrative sample data. Images follow your GitHub l
 A quiet afternoon isn't a reason to cancel a plan. Bubble Tax keeps weekly and session limits separate, and records balances observed near reset so you can see repeated unused headroom over time.
 
 <p align="center">
+<a href="assets/unused-history.png">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/unused-history-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/unused-history.png">
   <img src="assets/unused-history.png" alt="Unused history: separate charts for weekly and session balances observed near reset" width="480">
 </picture>
+</a>
 </p>
 
 Compare smaller plans, review the provider's cancellation options, then record the change **after you complete it**. Savings shows estimated monthly list-price reductions. Work plans use seat reviews and stay outside personal savings.
