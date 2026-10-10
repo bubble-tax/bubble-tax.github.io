@@ -37,3 +37,7 @@ Open Graph and Twitter large-image metadata are in `index.html`, with a 1200×63
 The current Sites deployment is owner-private. Anonymous social preview crawlers may receive the sign-in page rather than the landing metadata; actual external unfurling requires anonymous access. No audience change was made when adding metadata.
 
 Product captures use richer isolated sample data. Transparent outer margins and the native popover arrow are cropped from the PNGs while preserving rounded corners. Additional dark-mode and single-service screenshots are provided separately.
+
+## Appearance
+
+The page follows the system theme on first visit. Light/Dark switches persist locally. Product images use native light and dark captures; the menu-bar SVG is an illustration with sample quota, using the actual app title format. Every tour screen and enlarged image follows the selected theme.
