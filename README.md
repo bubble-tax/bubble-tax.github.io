@@ -1,49 +1,89 @@
-# Bubble Tax landing page
+# Bubble Tax
 
-Static English landing page for GitHub Pages. No build step, external fonts, tracker, framework or embedded payment script. A short, monochrome product page uses one existing comic illustration and native app screenshots. Screenshots are actual macOS captures with isolated sample data; original color PNGs open in the image viewer.
+**Stop sponsoring the AI bubble.**
 
-## Preview
+A Mac menu-bar app for AI subscriptions you pay for and barely use.
+See what is **left**, spot the plans worth reviewing, and keep a record when you cancel or downgrade.
 
-From the repository root:
+[Download the Mac app](https://github.com/bubble-tax/bubble-tax.github.io/releases/download/v0.1.0/Bubble-Tax-0.1.0-macOS-arm64.zip) · [Website](https://bubble-tax.github.io/) · [Release notes](https://github.com/bubble-tax/bubble-tax.github.io/releases/tag/v0.1.0)
 
-```sh
-python3 -m http.server 8765 --directory site --bind 127.0.0.1
+![Bubble Tax — Stop sponsoring the AI bubble. Unused quota. Smaller plans. Less money burned.](assets/bubble-tax-og.png)
+
+## Your quota is chilling. Your subscription money isn't.
+
+One compact menu for **Claude, ChatGPT / Codex, Cursor, GitHub Copilot and Antigravity**.
+Paid-plan quotas rotate in the menu bar every eight seconds. Open it to see each service's remaining limits, weekly-quota persona and a roast that follows the evidence.
+
+<table>
+  <tr>
+    <td align="center"><strong>What you still haven't used</strong></td>
+    <td align="center"><strong>What you stopped paying for</strong></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/overview-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/overview.png">
+  <img src="assets/overview.png" alt="Bubble Tax overview: five AI subscriptions, weekly quota left and a contextual roast" width="380">
+</picture>
+    </td>
+    <td valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/savings-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/savings.png">
+  <img src="assets/savings.png" alt="Savings: recorded cancellations and downgrades, with estimated monthly price reductions" width="380">
+</picture>
+    </td>
+  </tr>
+</table>
+
+Actual macOS captures with illustrative sample data. Images follow your GitHub light or dark theme; click to view at full size.
+
+## Left today. Unused when the window expires.
+
+A quiet afternoon isn't a reason to cancel a plan. Bubble Tax keeps weekly and session limits separate, and records balances observed near reset so you can see repeated unused headroom over time.
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/unused-history-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/unused-history.png">
+  <img src="assets/unused-history.png" alt="Unused history: separate charts for weekly and session balances observed near reset" width="480">
+</picture>
+</p>
+
+Compare smaller plans, review the provider's cancellation options, then record the change **after you complete it**. Savings shows estimated monthly list-price reductions. Work plans use seat reviews and stay outside personal savings.
+
+The point is to spend less, not burn more tokens to justify the bill.
+
+## Try the preview
+
+**v0.1.0 · Apple silicon · macOS 14+ · Python 3.9+**
+
+1. [Download the ZIP](https://github.com/bubble-tax/bubble-tax.github.io/releases/download/v0.1.0/Bubble-Tax-0.1.0-macOS-arm64.zip), extract it and move **Bubble Tax.app** to Applications.
+2. Open the app, then click **†** in the menu bar. There is no Dock window.
+3. Open Settings to connect existing provider sessions or choose local log folders, then refresh.
+
+This preview is **ad-hoc signed and not notarized**. If macOS blocks first launch, follow [Apple's instructions for opening an app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac). Installation details and checksums are on the [release page](https://github.com/bubble-tax/bubble-tax.github.io/releases/tag/v0.1.0). No Intel build is included.
+
+## What the numbers mean
+
+- Quotas come from available provider sessions. Local Claude / Codex logs and Pi coding-agent sessions add activity; token counts alone cannot establish subscription quota or who paid.
+- ChatGPT's displayed quota is **Codex quota**, not every ChatGPT feature. Availability depends on the provider and authentication; missing readings stay unknown.
+- History and completed-change records stay on your Mac. USD list prices are estimates, not your invoices, refunds or accumulated cash saved.
+- Bubble Tax opens provider instructions. It does not cancel subscriptions or change billing on your behalf.
+
+## This repository
+
+This is the public landing-page and download repository. The app ZIP is attached to [Releases](https://github.com/bubble-tax/bubble-tax.github.io/releases); GitHub's automatic source archives contain the website, not the app source.
+
+The page is plain HTML, CSS and JavaScript, with native screenshots, light/dark themes and an eight-second menu-bar preview. No framework or build step.
+
+```bash
+python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8765. Use any available port if occupied.
+Open `http://127.0.0.1:8765`. Download and support destinations are in `config.js`. GitHub Pages serves this repository from the `main` branch root.
 
-## Before publication
+---
 
-Edit `site/config.js`: set `downloadUrl` to the actual Release asset, `githubUrl` to the public repository, and `coffeeUrl` to your Buy Me a Coffee page. `releaseLabel` should describe the actual version, architecture and signing status. Missing or invalid destinations stay disabled; there are no invented release or payment links.
-
-The current app/helper build targets Apple silicon and needs Python 3.9+ for collection (currently supplied by the developer's Command Line Tools). Validate prerequisites on a clean Mac before release; update download/install details accordingly. Signing/notarization or an explicit unsigned-beta installation guide must accompany the released artifact.
-
-## GitHub Pages
-
-Push the repository to GitHub, use `main` (or update the workflow branch), and choose Settings → Pages → Source → GitHub Actions. `.github/workflows/pages.yml` deploys only `site/`. It runs on relevant pushes to main or manually from Actions. Deployment has not been performed locally. All asset paths are relative to support project Pages under `/repository-name/`.
-
-`assets/` contains seven native app captures and six existing persona illustrations. Capture source: `../../screenshots/landing-clean/`. No user account information is published. Keep demo captions when replacing screenshots with other demo captures.
-
-Screenshots are recaptured from the native app with `--hide-demo-badge`; isolated demo data and mutation guards remain active. Public captions identify the data as illustrative.
-
-The page is deliberately small: hero, six-screen viewer, a single Data note, download row and plain support link. Numbered sections, repeated slogans, three-column feature/persona grids and the FAQ were removed.
-
-Savings is the default screenshot. The larger hero capture stays clear of the decorative character; mobile omits the character. Feature navigation sits above a compact image/text row.
-
-## Share metadata
-
-Open Graph and Twitter large-image metadata are in `index.html`, with a 1200×630 PNG at `assets/bubble-tax-og.png`. Regenerate from the existing comic asset and native typography with `swift scripts/render-og.swift` from the repository root. The canonical, OG URL and OG/Twitter image URLs use the current Sites origin. Update all of them together when moving to GitHub Pages or a custom domain; do not use localhost or relative image URLs for share metadata.
-
-The current Sites deployment is owner-private. Anonymous social preview crawlers may receive the sign-in page rather than the landing metadata; actual external unfurling requires anonymous access. No audience change was made when adding metadata.
-
-Product captures use richer isolated sample data. Transparent outer margins and the native popover arrow are cropped from the PNGs while preserving rounded corners. Additional dark-mode and single-service screenshots are provided separately.
-
-## Appearance
-
-The page follows the system theme on first visit. Light/Dark switches persist locally. Product images use native light and dark captures; the hero combines a macOS desktop illustration with the native app capture. Its menu-bar quota uses the actual app title format and opens or closes the captured preview. Every tour screen and enlarged image follows the selected theme.
-
-The hero cycles five paid-plan sample quotas every 8 seconds. The flip matches the native 130ms fold and 170ms unfold, keeps the menu width fixed, and switches to a matching native capture. Reduced motion keeps the rotation without the flip; hidden tabs and enlarged screenshots pause the preview.
-
-## Public preview
-
-[Download v0.1.0](https://github.com/bubble-tax/bubble-tax.github.io/releases/tag/v0.1.0). Apple silicon, macOS 14+, Python 3.9+. The ZIP contains the app and installation/release notes; SHA256SUMS.txt is a separate release asset. This preview is ad-hoc signed and not notarized.
+Coffee money? In this AI economy? [If you insist.](https://buymeacoffee.com/workromancer)
