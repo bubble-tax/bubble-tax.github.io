@@ -41,3 +41,5 @@ Product captures use richer isolated sample data. Transparent outer margins and 
 ## Appearance
 
 The page follows the system theme on first visit. Light/Dark switches persist locally. Product images use native light and dark captures; the hero combines a macOS desktop illustration with the native app capture. Its menu-bar quota uses the actual app title format and opens or closes the captured preview. Every tour screen and enlarged image follows the selected theme.
+
+The hero cycles five paid-plan sample quotas every 8 seconds. The flip matches the native 130ms fold and 170ms unfold, keeps the menu width fixed, and switches to a matching native capture. Reduced motion keeps the rotation without the flip; hidden tabs and enlarged screenshots pause the preview.
