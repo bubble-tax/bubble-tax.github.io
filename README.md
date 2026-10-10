@@ -5,7 +5,7 @@
 A Mac menu-bar app for AI subscriptions you pay for and barely use.
 See what is **left**, spot the plans worth reviewing, and keep a record when you cancel or downgrade.
 
-[Download the Mac app](https://github.com/bubble-tax/bubble-tax.github.io/releases/download/v0.1.0/Bubble-Tax-0.1.0-macOS-arm64.zip) · [Website](https://bubble-tax.github.io/) · [Release notes](https://github.com/bubble-tax/bubble-tax.github.io/releases/tag/v0.1.0)
+[Download the Mac app](https://github.com/bubble-tax/bubble-tax-bar/releases/download/v0.1.0-build.5/Bubble-Tax-0.1.0-macOS-arm64.zip) · [Website](https://bubble-tax.github.io/) · [Release notes](https://github.com/bubble-tax/bubble-tax-bar/releases/tag/v0.1.0-build.5)
 
 ![Bubble Tax — Stop sponsoring the AI bubble. Unused quota. Smaller plans. Less money burned.](assets/bubble-tax-og.png)
 
@@ -65,13 +65,13 @@ The point is to spend less, not burn more tokens to justify the bill.
 
 **v0.1.0 · Build 5 · Apple silicon · macOS 14+**
 
-1. [Download the ZIP](https://github.com/bubble-tax/bubble-tax.github.io/releases/download/v0.1.0/Bubble-Tax-0.1.0-macOS-arm64.zip), extract it and move **Bubble Tax.app** to Applications.
+1. [Download the ZIP](https://github.com/bubble-tax/bubble-tax-bar/releases/download/v0.1.0-build.5/Bubble-Tax-0.1.0-macOS-arm64.zip), extract it and move **Bubble Tax.app** to Applications.
 2. Open the app, then click **†** in the menu bar. There is no Dock window.
 3. Open Settings to connect existing provider sessions or choose local log folders, then refresh.
 
 Provider quotas, local log activity and the Claude statusline bridge work without installing Python or developer tools. Both collectors ship inside the app. Move it to Applications before connecting the Claude bridge; reconnect if you move it later.
 
-This preview is **ad-hoc signed and not notarized**. If macOS blocks first launch, follow [Apple's instructions for opening an app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac). Installation details and checksums are on the [release page](https://github.com/bubble-tax/bubble-tax.github.io/releases/tag/v0.1.0). No Intel build is included.
+This preview is **ad-hoc signed and not notarized**. If macOS blocks first launch, follow [Apple's instructions for opening an app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac). Installation details and checksums are on the [release page](https://github.com/bubble-tax/bubble-tax-bar/releases/tag/v0.1.0-build.5). No Intel build is included.
 
 ## What the numbers mean
 
@@ -82,7 +82,7 @@ This preview is **ad-hoc signed and not notarized**. If macOS blocks first launc
 
 ## This repository
 
-This is the public landing-page and download repository. The app ZIP is attached to [Releases](https://github.com/bubble-tax/bubble-tax.github.io/releases); GitHub's automatic source archives contain the website, not the app source.
+This repository hosts the public landing page. App source, release notes and downloads live in [bubble-tax-bar](https://github.com/bubble-tax/bubble-tax-bar). Automatic source archives from this repository contain the website.
 
 The page is plain HTML, CSS and JavaScript, with native screenshots, light/dark themes and an eight-second menu-bar preview. No framework or build step.
 
