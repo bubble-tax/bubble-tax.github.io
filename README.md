@@ -1,97 +1,34 @@
-# Bubble Tax
+# Bubble Tax landing page
 
-**Stop sponsoring the AI bubble.**
+Static English landing page, published from [bubble-tax/bubble-tax.github.io](https://github.com/bubble-tax/bubble-tax.github.io). The app repository keeps the canonical source in `site/`; it does not run a Pages deployment workflow.
 
-A Mac menu-bar app for AI subscriptions you pay for and barely use.
-See what is **left**, spot the plans worth reviewing, and keep a record when you cancel or downgrade.
+The product tour leads with paired five-hour/weekly quota comparisons, then task allocation, reservations, forecasts, usage patterns and plan review. The hero offers menu-bar and MacBook-notch previews. Theme changes swap native light/dark captures as well as page colors.
 
-[Download the Mac app](https://github.com/bubble-tax/bubble-tax-bar/releases/download/v0.1.0-build.8/Bubble-Tax-0.1.0-macOS-arm64.zip) · [Website](https://bubble-tax.github.io/) · [Release notes](https://github.com/bubble-tax/bubble-tax-bar/releases/tag/v0.1.0-build.8)
+## Screenshots
 
-![Bubble Tax — Stop sponsoring the AI bubble. Unused quota. Smaller plans. Less money burned.](assets/bubble-tax-og.png)
+Use the native app with isolated `--demo-data`, `--hide-demo-badge`, and `--appearance-light` / `--appearance-dark`. Fixtures must contain fictional accounts and logs. Capture the relevant view, crop the popover arrow and outer transparent padding, and keep public “sample data” captions. Never publish screenshots from real account state.
 
-## Your quota is chilling. Your subscription money isn't.
+Reservations are planning targets, forecasts are estimates, and local log model usage is not on-device model inference or verified quota attribution. Do not describe suggestions as automatic task execution or quotas as transferable.
 
-One compact menu for **Claude, ChatGPT / Codex, Cursor, GitHub Copilot and Antigravity**.
-Paid-plan quotas rotate in the menu bar every eight seconds. Open it to see each service's remaining limits, weekly-quota persona and a roast that follows the evidence.
+## Configuration
 
-<table>
-  <tr>
-    <td align="center"><strong>What you still haven't used</strong></td>
-    <td align="center"><strong>What you stopped paying for</strong></td>
-  </tr>
-  <tr>
-    <td valign="top">
-<a href="assets/overview.png">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/overview-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/overview.png">
-  <img src="assets/overview.png" alt="Bubble Tax overview: five AI subscriptions, weekly quota left and a contextual roast" width="380">
-</picture>
-</a>
-    </td>
-    <td valign="top">
-<a href="assets/savings.png">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/savings-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/savings.png">
-  <img src="assets/savings.png" alt="Savings: recorded cancellations and downgrades, with estimated monthly price reductions" width="380">
-</picture>
-</a>
-    </td>
-  </tr>
-</table>
+`config.js` supplies the release download, repository, support destination and host-specific GA4 web streams:
 
-Actual macOS captures with illustrative sample data. Images follow your GitHub light or dark theme; click to view at full size.
+| Host | Measurement ID |
+| --- | --- |
+| `bubble-tax.github.io` | `G-RDQQMG2P3P` |
+| `bubble-tax.workromancer.ai` | `G-ZGTF5YBTDW` |
 
-## Left today. Unused when the window expires.
+`analytics.js` loads only the current host’s stream. Local preview, unknown hosts and browsers with Global Privacy Control enabled do not load Google Analytics. Advertising signals are disabled. Events are page views, `download_click`, `homebrew_copy_click` (the click, not guaranteed clipboard success), and `feature_view`. App logs, account data, prompts and quota records are not included. Automatic enhanced measurement can also be configured in the GA4 property.
 
-A quiet afternoon isn't a reason to cancel a plan. Bubble Tax keeps weekly and session limits separate, and records balances observed near reset so you can see repeated unused headroom over time.
+The custom hostname is served by a Cloudflare Worker from the same Pages origin, keeping both public addresses accessible. See [the custom-host configuration](https://github.com/bubble-tax/bubble-tax-bar/tree/main/deploy/cloudflare) for its source and routing.
 
-<p align="center">
-<a href="assets/unused-history.png">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/unused-history-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/unused-history.png">
-  <img src="assets/unused-history.png" alt="Unused history: separate charts for weekly and session balances observed near reset" width="480">
-</picture>
-</a>
-</p>
+## Publishing
 
-Compare smaller plans, review the provider's cancellation options, then record the change **after you complete it**. Savings shows estimated monthly list-price reductions. Work plans use seat reviews and stay outside personal savings.
+Copy the static source and assets to the website repository, commit and push its main branch. Update script query hashes when changing JavaScript or CSS. Verify the live tour, theme pairs, menu/notch previews, download and Homebrew command after the Pages build succeeds.
 
-The point is to spend less, not burn more tokens to justify the bill.
+The app and its collectors ship together; visitors do not need Python or a local server to use the app. The current download is Developer ID signed and Apple notarized.
 
-## Try the preview
+## Share metadata
 
-**v0.1.0 · Build 8 · Apple silicon · macOS 14+**
-
-1. [Download the ZIP](https://github.com/bubble-tax/bubble-tax-bar/releases/download/v0.1.0-build.8/Bubble-Tax-0.1.0-macOS-arm64.zip), extract it and move **Bubble Tax.app** to Applications.
-2. Open the app, then click **†** in the menu bar. There is no Dock window.
-3. Open Settings to connect existing provider sessions or choose local log folders, then refresh.
-
-Provider quotas, local log activity and the Claude statusline bridge work without installing Python or developer tools. Both collectors ship inside the app. Move it to Applications before connecting the Claude bridge; reconnect if you move it later.
-
-This preview is **Developer ID signed; Apple notarization is not complete**. If macOS blocks first launch, follow [Apple's instructions for opening an app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac). Installation details and checksums are on the [release page](https://github.com/bubble-tax/bubble-tax-bar/releases/tag/v0.1.0-build.8). No Intel build is included.
-
-## What the numbers mean
-
-- Quotas come from available provider sessions. Local Claude / Codex logs and Pi coding-agent sessions add activity; token counts alone cannot establish subscription quota or who paid.
-- ChatGPT's displayed quota is **Codex quota**, not every ChatGPT feature. Availability depends on the provider and authentication; missing readings stay unknown.
-- History and completed-change records stay on your Mac. USD list prices are estimates, not your invoices, refunds or accumulated cash saved.
-- Bubble Tax opens provider instructions. It does not cancel subscriptions or change billing on your behalf.
-
-## This repository
-
-This repository hosts the public landing page. App source, release notes and downloads live in [bubble-tax-bar](https://github.com/bubble-tax/bubble-tax-bar). Automatic source archives from this repository contain the website.
-
-The page is plain HTML, CSS and JavaScript, with native screenshots, light/dark themes and an eight-second menu-bar preview. No framework or build step.
-
-```bash
-python3 -m http.server 8765 --bind 127.0.0.1
-```
-
-Open `http://127.0.0.1:8765`. Download and support destinations are in `config.js`. GitHub Pages serves this repository from the `main` branch root.
-
----
-
-Coffee money? In this AI economy? [If you insist.](https://buymeacoffee.com/workromancer)
+Canonical and Open Graph URLs use `https://bubble-tax.github.io/`. The share image is `assets/bubble-tax-og.png` (1200×630). Regenerate the existing monochrome character and native typography with `swift scripts/render-og.swift` from the app repository root.
